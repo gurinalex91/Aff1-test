@@ -1,6 +1,6 @@
 $(function () {
-    var wheel = document.querySelector('.wheel-img');
-    var resultWrapper = document.querySelector('.spin-result-wrapper');
+    const wheel = document.querySelector('.wheel-img');
+    const resultWrapper = document.querySelector('.spin-result-wrapper');
     $('.cursor-text').click(function () {
         if (wheel.classList.contains('rotated')) {
             resultWrapper.style.display = "block";
@@ -12,9 +12,6 @@ $(function () {
             setTimeout(function () {
                 $('.spin-wrapper').slideUp();
                 $('.order_block').slideDown();
-                setTimeout(function () {
-                    $('.order_block').hide();
-                }, 1000);
             }, 10000);
             wheel.classList.add('rotated');
         }
@@ -23,7 +20,7 @@ $(function () {
     $('.close-popup, .pop-up-button').click(function (e) {
         e.preventDefault();
         $('.spin-result-wrapper').fadeOut();
-        var top = $('#toform').offset().top;
+        let top = $('#toform').offset().top;
         $('body,html').animate({
             scrollTop: top
         }, 800);
@@ -32,7 +29,7 @@ $(function () {
 
 
     $('[href^="#"]').on('click', function (e) {
-        // e.preventDefault();
+        e.preventDefault();
         $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top
         }, 800)

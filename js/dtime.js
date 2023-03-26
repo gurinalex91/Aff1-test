@@ -1,14 +1,14 @@
 function dtime_me(d, like_eu) {
-    var now = new Date();
+    let now = new Date();
     now.setDate(now.getDate() + d + 1);
 
-    var dayNum = '';
+    let dayNum = '';
     if (now.getDate() < 10) {
         dayNum = '0';
     }
     dayNum += now.getDate();
 
-    var monthNum = '';
+    let monthNum = '';
     if (now.getMonth() + 1 < 10) {
         monthNum = '0';
     }
@@ -32,15 +32,7 @@ days_localized = {
 }
 
 function dtime_mt(d) {
-    var now = new Date();
+    let now = new Date();
     now.setDate(now.getDate() + d + 1);
     document.write((now.getDate()) + ", " + " " + months_localized['en'][now.getMonth()] + " " + now.getFullYear());
 }
-
-
-
-
-
-
-
-

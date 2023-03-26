@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var namesArray = ['Miran', 'Amiran', 'Mikael', 'Liam', 'Kemal'];
-    var cityArray = ['Kyiv', 'epvnf', 'test'];
-    var alert = document.querySelector('.alert');
-    var alertName = alert.querySelector('.alert__name');
-    var alertCity = alert.querySelector('.alert__city');
-    var alertCount = alert.querySelector('.alert__count');
-    var clsAlertShow = 'alert--show';
-    var alertInterval = null;
+    let namesArray = ['Miran', 'Amiran', 'Mikael', 'Liam', 'Kemal'];
+    let cityArray = ['Kyiv', 'epvnf', 'test'];
+    let alert = document.querySelector('.alert');
+    let alertName = alert.querySelector('.alert__name');
+    let alertCity = alert.querySelector('.alert__city');
+    let alertCount = alert.querySelector('.alert__count');
+    let clsAlertShow = 'alert--show';
+    let alertInterval = null;
     alertInterval = setInterval(intervalHandler, getRandom(26000, 34000));
 
     function intervalHandler() {
@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function createAlertMessage() {
-        var name = namesArray[getRandom(0, namesArray.length - 1)];
-        var city = cityArray[getRandom(0, cityArray.length - 1)];
-        var count = getRandom(2, 4);
+        let name = namesArray[getRandom(0, namesArray.length - 1)];
+        let city = cityArray[getRandom(0, cityArray.length - 1)];
+        let count = getRandom(2, 4);
         alertName.textContent = name;
         alertCity.textContent = city;
         alertCount.textContent = count;
@@ -44,4 +44,15 @@ document.addEventListener('DOMContentLoaded', function () {
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
+
+    const scrollTopBtn = document.getElementById('scrollTop__btn');
+    scrollTopBtn.style.display = 'none';
+
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 100) {
+            scrollTopBtn.style.display = 'block';
+        } else {
+            scrollTopBtn.style.display = 'none';
+        }
+    });
 });

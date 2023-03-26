@@ -1,1111 +1,1736 @@
 <!DOCTYPE html>
 
 <html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+        <meta content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
 
-<head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;700&display=swap" />
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-    <meta content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" name="viewport"/>
+        <title>Sharon's Blog</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <link href="css/reset.css" media="all" rel="stylesheet" type="text/css" />
+        <link href="css/fortune-wheel.css" media="all" rel="stylesheet" type="text/css" />
+        <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="css/live-comments.css" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-    <title>Sharon's Blog</title>
+        <script src="js/dtime.js"></script>
+    </head>
 
-<!--    <link href="reset.css" media="all" rel="stylesheet" type="text/css"/>-->
-    <link href="css/style-old.css" media="all" rel="stylesheet" type="text/css"/>
-    <link href="css/style.css" media="all" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="css/live-comments.css"/>
-<!--    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">-->
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <!-- Header Top -->
+            <div class="header-top">
+                <div class="header-logo">
+                    <img class="logo" src="img/header-logo.svg" alt="logo" />
+                </div>
+            </div>
+            <!-- Header Bottom -->
+            <div class="header-bottom">
+                <div class="container">
+                    <a href="#toform" class="mobile-menu">
+                        <img src="img/burger.svg" alt="burger" />
+                    </a>
+                    <ul class="nav">
+                        <li class="nav__item"><a href="#toform">Home</a></li>
+                        <li class="nav__item">
+                            <a href="#toform">Lifestyle</a>
+                        </li>
+                        <li class="nav__item"><a href="#toform">Culture</a></li>
+                        <li class="nav__item"><a href="#toform">Travel</a></li>
+                        <li class="nav__item"><a href="#toform">Fashion</a></li>
+                    </ul>
+                    <!-- Header Social -->
+                    <div class="header-bottom__right-section">
+                        <ul class="social">
+                            <li class="social-item">
+                                <a href="#toform" class="social-item__link">
+                                    <svg class="facebook" width="11" height="22" >
+                                        <use xlink:href="img/icons-sprite.svg#facebook" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="#toform" class="social-item__link">
+                                    <svg class="twitter" width="20" height="18" >
+                                        <use xlink:href="img/icons-sprite.svg#twitter" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="#toform" class="social-item__link">
+                                    <svg class="instagram" width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.6032 4.47327C14.7523 4.47326 14.9 4.5044 15.0377 4.56491C15.1754 4.62541 15.3003 4.71406 15.4052 4.82574C15.5101 4.93741 15.593 5.06989 15.6489 5.2155C15.7049 5.36111 15.7329 5.51697 15.7313 5.67404C15.7265 5.99095 15.6049 6.29348 15.392 6.5176C15.1792 6.74171 14.8919 6.86982 14.5909 6.87482C14.2885 6.87482 13.9984 6.74831 13.7845 6.52312C13.5707 6.29793 13.4505 5.99251 13.4505 5.67404C13.4505 5.35558 13.5707 5.05015 13.7845 4.82497C13.9984 4.59978 14.2885 4.47327 14.5909 4.47327H14.6032Z"
+                                            fill="white"
+                                        />
+                                        <path
+                                            d="M18.8828 6.01534C19.0238 7.59055 19.1158 15.0534 18.6743 16.7707C18.4593 17.8145 17.9392 18.7613 17.1871 19.478C16.435 20.1947 15.4886 20.6454 14.4807 20.7668C12.7409 20.947 10.9928 21.0225 9.24484 20.9927C7.48049 21.0461 5.71495 20.9467 3.96604 20.6958C2.9776 20.4845 2.0785 19.9479 1.39856 19.1635C0.718621 18.379 0.29302 17.3874 0.183208 16.3317C-0.0742941 14.6467 -0.0988182 6.80294 0.361008 5.10507C0.592998 4.09189 1.11385 3.17771 1.85363 2.48531C2.5934 1.7929 3.51666 1.35541 4.49944 1.23161C6.08081 1.04378 7.67207 0.963995 9.26323 0.992742C11.0351 0.992742 12.8254 1.04439 13.8983 1.10249C15.1906 1.13526 16.4261 1.6685 17.3684 2.60023C18.2583 3.50118 18.7981 4.71849 18.8828 6.01534ZM17.0435 16.0024C17.3024 12.7278 17.3434 9.43804 17.1661 6.15736C17.1269 5.36099 16.8197 4.60534 16.2995 4.02572C15.7794 3.4461 15.0803 3.08037 14.3274 2.99403C12.75 2.84186 11.1659 2.77936 9.58205 2.80682C7.68756 2.80682 5.80534 2.85846 4.97766 2.9553C4.21711 3.00257 3.49653 3.32974 2.9418 3.87963C2.38707 4.42952 2.03348 5.16717 1.94281 5.96369C1.68252 9.32288 1.65998 12.6978 1.87537 16.0605C1.93765 16.7309 2.19754 17.364 2.61863 17.871C3.03971 18.3781 3.60089 18.7337 4.22354 18.8882C5.91437 19.1445 7.62332 19.2439 9.33067 19.1851C11.3233 19.1851 13.279 19.1206 14.0148 19.0366C14.7849 18.9971 15.5164 18.67 16.0781 18.1139C16.6399 17.5579 16.9952 16.8093 17.0803 16.0024"
+                                            fill="white"
+                                        />
+                                        <path
+                                            d="M9.53894 5.86771C10.1796 5.86763 10.8139 6.00173 11.4049 6.26222C11.9959 6.5227 12.5318 6.90436 12.9814 7.38498C13.431 7.8656 13.7853 8.43559 14.0237 9.06176C14.2622 9.68793 14.3799 10.3578 14.3702 11.0323C14.3605 12.3953 13.8394 13.6991 12.9206 14.6593C12.0019 15.6194 10.7599 16.1583 9.46536 16.1582C8.82444 16.1592 8.18976 16.0257 7.59839 15.7655C7.00701 15.5053 6.47079 15.1237 6.02103 14.6429C5.57126 14.1621 5.21698 13.5917 4.97885 12.9652C4.74073 12.3386 4.62354 11.6684 4.63413 10.9936C4.64384 9.63057 5.16487 8.32686 6.08365 7.36667C7.00243 6.40648 8.24445 5.86767 9.53894 5.86771ZM9.47149 14.3119C10.3034 14.3087 11.1011 13.9633 11.6944 13.3494C12.2878 12.7354 12.6298 11.9016 12.6474 11.0259C12.6621 10.1537 12.3476 9.31104 11.7729 8.68284C11.1981 8.05465 10.4101 7.69229 9.58185 7.67532H9.5512C8.71933 7.6785 7.92159 8.02391 7.32824 8.63784C6.73489 9.25176 6.39293 10.0856 6.37533 10.9613C6.36721 11.3961 6.44111 11.8282 6.59277 12.2327C6.74442 12.6371 6.9708 13.0059 7.2588 13.3175C7.54679 13.6292 7.89067 13.8776 8.27049 14.0482C8.65032 14.2189 9.05854 14.3085 9.47149 14.3119Z"
+                                            fill="white"
+                                        />
+                                        <defs>
+                                            <radialGradient id="instagram-gradient" r="150%" cx="30%" cy="107%">
+                                                <stop stop-color="#fdf497" offset="0"/>
+                                                <stop stop-color="#fdf497" offset="0.05"/>
+                                                <stop stop-color="#fd5949" offset="0.45"/>
+                                                <stop stop-color="#d6249f" offset="0.6"/>
+                                                <stop stop-color="#285aeb" offset="0.9"/>
+                                            </radialGradient>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="#toform" class="social-item__link">
+                                    <svg class="youtube" width="20" height="16">
+                                        <use xlink:href="img/icons-sprite.svg#youtube"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="search-btn">
+                            <a class="search-btn__img" href="#toform">
+                                <img src="img/search.png" alt="search-icon" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main -->
+        <div class="container content">
+            <main class="main">
+                <!-- Main Article -->
+                <article class="article">
+                    <img
+                        src="img/article-img1.jpg"
+                        alt="Sharon with man"
+                        class="article-img first-img"
+                    />
 
+                    <h2 class="article__title">
+                        We were on the verge of divorce because of the weak
+                        potency of my husband! But our family was miraculously
+                        saved. Now he can 4-6 times a night!
+                        <div class="article__author">
+                            Published
+                            <script>
+                                dtime_me(-8, true);
+                            </script>
+                            Author: Sharon
+                        </div>
+                    </h2>
 
-    <script src="js/dtifme.js"></script>
-</head>
+                    <p class="article__p">
+                        Hello! You may remember that I used to make complaints
+                        about my husband about 6 months ago. Sex is so
+                        unsatisfactory as we could not reach the ‘top’? Even
+                        when I use my mouth, the penis did not show any sign of
+                        erection, or the erection does not last long, only from
+                        1-3 minutes at most!
+                    </p>
 
-<body>
-<header class="header">
-    <div class="header-top">
-        <div class="header-logo">
-            <img class="logo" src="img/header-logo.svg" alt="">
-        </div>
-    </div>
-    <div class="header-bottom">
-        <div class="container">
-            <a href="#toform" class="mobile-menu">
-                <img src="img/burger.svg" alt="">
-            </a>
-            <ul class="nav">
-                <li class="nav__item"><a href="#toform">Home</a></li>
-                <li class="nav__item"><a href="#toform">Lifestyle</a></li>
-                <li class="nav__item"><a href="#toformffvb">Culture</a></li>
-                <li class="nav__item"><a href="#toformffvb">Travel</a></li>
-                <li class="nav__item"><a href="#toform">Fashion</a></li>
-            </ul>
+                    <p class="article__p">
+                        When I see pornography – I realize that all guys own a
+                        firm penis, which is always ready to ‘do it’.
+                    </p>
 
-            <div class="header-bottom__right-section">
-                <ul class="social">
-                    <li class="social-item">
-                        <a href="#toform">
-                            <img src="img/facebook.svg" alt="">
-                        </a>
-                    </li>
-                    <li class="social-item">
-                        <a href="#toform">
-                            <img src="img/twitter.svg" alt="">
-                        </a>
-                    </li>
-                    <li class="social-item">
-                        <a href="#toform">
-                            <img src="img/instagram.svg" alt="">
-                        </a>
-                    </li>
-                    <li class="social-item">
-                        <a href="#toformr44">
-                            <img src="css/youtube.png" alt="">
-                        </a>
-                    </li>
-                </ul>
-                <div class="search-btn">
-                    <a class="search-btn__img" href="#toform">
-                        <img src="img/search.png" alt="">
+                    <p class="article__p">
+                        I took your advice, my husband also found all ways:
+                        including Viagra and tons of other erectile dysfunction
+                        drugs as well as exercising yoga to help increase the
+                        feelings of sex. But all ended up in vain!
+                    </p>
+
+                    <p class="article__p last-p">
+                        At last, I decided to live with it and I took credit for
+                        genetic factors and body’s functions of each person! I
+                        accepted the fact that the situation were caused by
+                        genetic factors and I saw that my husband lost all of
+                        his confidence when we discussed about this sensitive
+                        problems. Thus, even I didn’t have any desire for sex
+                        with my husband as I always anticipated the disastrous
+                        outcomes after sex when I could not feel satisfy, and my
+                        husband felt depressed.
+                    </p>
+
+                    <img
+                        src="img/article-img2.jpg"
+                        alt="Sharon on sofa"
+                        class="article-img"
+                    />
+
+                    <h2 class="article__title">Then a surprise came…</h2>
+
+                    <p class="article__p">
+                        Sometimes, a smallest ocasion can change a life. My
+                        entire life took a 180 turn after just one party.
+                    </p>
+
+                    <p class="article__p">
+                        Yeah, it feels like a comedy sketch, but hear me out. A
+                        couple of months ago, our new neighbour knocked on our
+                        doors to invite us to the party. She seemed alright and
+                        me and my husband agreed. After all, there was not much
+                        to do outside because of all the quarantine restrictions
+                        and we both felt we’ll be glad to meet new people.
+                    </p>
+
+                    <p class="article__p">
+                        When we arrived, there were a whole lot of new folks we
+                        had never seen before. After making some rounds, I
+                        noticed a strange couple. Why would a father and a
+                        daughter go to a party? I mean, she was super young for
+                        his age so they probably were not together.
+                    </p>
+
+                    <p class="article__p">
+                        I asked our neighbor about them. “Oh, you’re not the
+                        first to think so,” she replied. “Everybody thinks this
+                        way, because he is 30 years older than her.”
+                    </p>
+
+                    <p class="article__p">Excuse me???</p>
+
+                    <p class="article__p">
+                        I mean, yes, he was older but there is no way, he is
+                        THIRTY years older! He looks like he is 45 at best.
+                        Anyway, the neighbor proceeded to explain. She said they
+                        fell in love because he is so kind and a great man in
+                        general. Plus, you can’t deny he is in a great physical
+                        form. Not just for his age. I bet he could be a goddamn
+                        model if he was in his twenties. I bet he has a killer
+                        set of abs too.
+                    </p>
+
+                    <p class="article__p">
+                        After several cocktails, I was still curious about them.
+                        Alright, he looks hot and all but is everything so
+                        smooth? Men in their later years tend to have some
+                        problems with performance. Like, bedroom performance. A
+                        girl in her twenties probably has a greater appetite
+                        than he could satisfy.
+                    </p>
+
+                    <p class="article__p">
+                        As I said, I had a couple of cocktails so I was not able
+                        to stop myself before I came to the girl and asked her
+                        directly. Thank God, she understood my condition and
+                        decided not to start a scene. She explained, really
+                        calmly that, actually, yes, there was a time her partner
+                        had issues during sex. However, she just ordered Long
+                        jack XXXL and the troubles were gone like magic.
+                    </p>
+
+                    <p class="article__p last-p">
+                        I was drunk but this information got stuck in my head
+                        for the entire next week. Not like I am complaining
+                        about my husband, but he needs some help once in a
+                        while. I tried looking for Long Jack XXXL but no
+                        pharmacy ever heard of that. Turns out, it is only sold
+                        directly by a manufacturer through their website. Well,
+                        that is even better in my opinion. There are no extras
+                        on the price from pharmacies and you can be sure the
+                        product is always original. So, I easily ordered some
+                        Long Jack XXXL.
+                    </p>
+
+                    <img
+                        src="img/image-3.jpg"
+                        alt="long jack two bottles"
+                        class="article-img"
+                    />
+
+                    <h2 class="article__title">How was the result?</h2>
+
+                    <p class="article__p">
+                        I opened the product, read the instruction and told my
+                        husband to use it..
+                    </p>
+
+                    <p class="article__p">
+                        <b
+                            >On the second day of using, his penis was so ready
+                            with impressive size inside his trousers.</b
+                        >
+                    </p>
+
+                    <p class="article__p">
+                        He can’t help rushing into me: we had sex during 1 hours
+                        and 47 minutes. His penis was as solid as IRON during
+                        the whole intercourse! When we reached orgasm, oh my
+                        god… WE BOTH SCREAMED AND IT SEEMED LIKE THE HOUSE WAS
+                        SHAKING, THAT WAS AWESOME!!! I have never experienced
+                        such a wonderful feelings like that throughout my entire
+                        life! Of course, I hoped the product would work. But I
+                        did not think that it was so amazing. EXTREMELY
+                        powerful…
+                    </p>
+
+                    <div class="quote">
+                        <div class="quote__symbol">“</div>
+                        <div class="quote__text">
+                            dont hesitate spending money for good things.
+                        </div>
+                    </div>
+
+                    <p class="article__p last-p">
+                        But it was the truth, I could not believe that this
+                        product could influence so significantly on the body. My
+                        husband was able to regain self-confidence and my
+                        respect for him in a short time! You can judge the price
+                        of the product yourself, but if it can change your life
+                        for good, why not?
+                    </p>
+
+                    <img
+                        src="img/article-img4.jpg"
+                        alt="long jack bottle"
+                        class="article-img article-img--last"
+                    />
+                </article>
+                <!-- Fortune Wheel -->
+                <span id="toform"></span>
+                <div class="features-wrapper">
+                    <div class="spin-wrapper">
+                        <div class="wheel-text">
+                            <p class="wheel-title">Caution!</p>
+                            <p class="wheel-p">
+                                Visitors to our website have the exclusive
+                                opportunity to order.
+                            </p>
+                            <p class="wheel-p highlight">
+                                Long Jack XXXL up to 50% cheaper!
+                            </p>
+                            <p class="wheel-p">
+                                To do this, start the wheel of fortune by
+                                pressing the "SPIN" button and then wait for it
+                                to stop completely. Who knows, maybe you are the
+                                lucky guy who can save a lot of money today!
+                                Good luck!
+                            </p>
+                        </div>
+                        <div class="wheel-wrapper">
+                            <div class="wheel">
+                                <img
+                                    class="wheel-img"
+                                    src="img/prizewheel.svg"
+                                    alt="fortune wheel"
+                                />
+                                <div class="wheel-cursor">
+                                    <img
+                                        src="img/wheel-cursor.png"
+                                        alt="wheel cursor"
+                                    /><span class="cursor-text"> SPIN</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="offer-date">
+                            Offer valid until (inclusive):
+                            <span class="highlight"
+                                ><script>
+                                    dtime_me(0, true);
+                                </script></span
+                            >
+                        </p>
+                    </div>
+                    <!-- Order Block -->
+                    <div class="order_block" style="display: none">
+                        <p class="offer-date">
+                            Offer valid until (inclusive):
+                            <span class="highlight"
+                                ><script>
+                                    dtime_me(0, true);
+                                </script></span
+                            >
+                        </p>
+                        <div class="order-info">
+                            <div class="order-info__product">
+                                <img src="img/product2.png" alt="bottle" />
+                            </div>
+                            <div class="order-info__price-wrap">
+                                <img
+                                    src="img/discount-label.png"
+                                    alt="discount label"
+                                />
+                                <div class="x_currency_old">{OLD_PRICE}</div>
+                                <div class="x_currency">{PRICE}</div>
+                            </div>
+                        </div>
+                        <form action="" class="form_order" method="post">
+                            <div class="target_list_wrap">
+                                <select
+                                    class="js-select form-item"
+                                    name="target_geo_hash"
+                                ></select>
+                            </div>
+                            <select
+                                required=""
+                                name="custom[city]"
+                                id=""
+                                class="form-item"
+                            >
+                                <option value="">Choose city</option>
+                                <option value="Nairobi">Nairobi</option>
+                                <option value="Mombasa">Mombasa</option>
+                                <option value="Kisumu">Kisumu</option>
+                                <option value="nakuru">Nakuru</option>
+                                <option value="other">Other</option>
+                            </select>
+
+                            <input
+                                class="form-item"
+                                name="client"
+                                placeholder="Name"
+                                type="text"
+                            />
+                            <input
+                                class="form-item"
+                                name="phone"
+                                placeholder="Phone number"
+                                type="text"
+                            />
+
+                            <button type="submit" class="submit-form">
+                                ORDER
+                            </button>
+                        </form>
+
+                        <div class="packs-left">
+                            <p class="packs-left__title">
+                                Data is updated in real time
+                            </p>
+                            <p class="packs-left__title highlight">
+                                Promotional 50% discount packages left:
+                            </p>
+                            <p class="packs-left__value">
+                                <span class="highlight">05</span>
+                                packs
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Modal After Spin -->
+                    <div class="spin-result-wrapper" style="display: none">
+                        <div class="pop-up-window">
+                            <div class="close-popup"></div>
+                            <span class="pop-up-heading lt71">
+                                Congratulations!</span
+                            >
+                            <p class="ruletka-p pop-up-text lt72">
+                                You get 50% off discount on Long Jack XXXL!
+                            </p>
+                            <button type="submit" class="pop-up-button lt73">
+                                OK
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Certificates -->
+                <img
+                    src="img/certificate.jpg"
+                    alt="certificates"
+                    class="article-img certificate"
+                />
+                <!-- Comments -->
+                <div class="comments">
+                    <div class="comments__title">
+                        Most recent comments
+                        <img src="img/angle-down.svg" alt="angle down" />
+                    </div>
+                    <!-- Comment -->
+                    <div class="comment-wrap">
+                        <div class="comment">
+                            <div class="comment__author-pic">
+                                <img src="img/aw1.jpg" alt="author avatar" />
+                            </div>
+                            <div class="comment__wrap">
+                                <div class="comment__body">
+                                    <div class="comment__author-name">
+                                        Elizabeth Ndung'u
+                                    </div>
+                                    <div class="comment__text">
+                                        One of my friends ordered it and was
+                                        satisfied with the result 😍
+                                    </div>
+                                </div>
+                                <div class="comment__footer">
+                                    <div class="comment__ui">
+                                        <span class="comment__ui-item"
+                                            >1 min ago</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Like</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Reply</span
+                                        >
+                                    </div>
+                                    <div class="emoji-box active" emoji-id="3">
+                                        <div class="emoji-box__emoji-wrap">
+                                            <div
+                                                class="emoji-box__ico like-ico"
+                                            >
+                                                <img
+                                                    src="img/emoji-like.png"
+                                                    alt="emoji like"
+                                                />
+                                            </div>
+                                            <div
+                                                class="emoji-box__ico heart-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-heart.png"
+                                                    alt="emoji heart"
+                                                />
+                                            </div>
+                                            <div class="emoji-box__ico wow-ico">
+                                                <img
+                                                    src="img/emoji-wow.png"
+                                                    alt="emoji wow"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="emoji-box__like-count">
+                                            1
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Comment -->
+                    <div
+                        class="comment-wrap answer-inc siblings-wrap line-hider"
+                    >
+                        <div class="comment">
+                            <div class="comment__author-pic">
+                                <img src="img/c1.jpg" alt="author avatar" />
+                            </div>
+                            <div class="comment__wrap">
+                                <div class="comment__body">
+                                    <div class="comment__author-name">
+                                        Ann Mwagi
+                                    </div>
+                                    <div class="comment__text">
+                                        I lived with my ex-boyfriend for 5
+                                        years, and all that time I didn’t like
+                                        having sex because of his weak boner. As
+                                        a result, we broke up, and I met the man
+                                        of my dreams. He shocked me in bed: he
+                                        can have sex for hours and his penis is
+                                        hard as stone! He recently told me that
+                                        Long Jack XXXL gives him so much energy)
+                                        💪👍😎
+                                        <img
+                                            src="img/image-1.jpg"
+                                            class="comment__img"
+                                            alt="author's photo"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="comment__footer">
+                                    <div class="comment__ui">
+                                        <span class="comment__ui-item"
+                                            >1 hour</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Like</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Reply</span
+                                        >
+                                    </div>
+                                    <div class="emoji-box active" emoji-id="1">
+                                        <div class="emoji-box__emoji-wrap">
+                                            <div
+                                                class="emoji-box__ico like-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-like.png"
+                                                    alt="emoji like"
+                                                />
+                                            </div>
+                                            <div
+                                                class="emoji-box__ico heart-ico"
+                                            >
+                                                <img
+                                                    src="img/emoji-heart.png"
+                                                    alt="emoji heart"
+                                                />
+                                            </div>
+                                            <div class="emoji-box__ico wow-ico">
+                                                <img
+                                                    src="img/emoji-wow.png"
+                                                    alt="emoji wow"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="emoji-box__like-count">
+                                            2
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Comment -->
+                        <div
+                            class="comment comment--answer answer-wrap"
+                            data-id="1"
+                        >
+                            <div class="comment__author-pic">
+                                <img src="img/005.jpg" alt="author avatar" />
+                            </div>
+                            <div class="comment__wrap">
+                                <div class="comment__body">
+                                    <div class="comment__author-name">
+                                        Joyce Ali
+                                    </div>
+                                    <div class="comment__text typing-block">
+                                        typing a comment
+                                        <span class="appear">.</span>
+                                        <span class="appear">.</span>
+                                        <span class="appear">.</span>
+                                    </div>
+                                    <div class="comment__text typed-text">
+                                        I ordered - my husband will have a
+                                        birthday present))) why give something
+                                        that is useless, right?
+                                    </div>
+                                </div>
+                                <div class="comment__footer additional-block">
+                                    <div class="comment__ui">
+                                        <span class="comment__ui-item"
+                                            >Just now</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Like</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Reply</span
+                                        >
+                                    </div>
+                                    <div class="emoji-box active" emoji-id="2">
+                                        <div class="emoji-box__emoji-wrap">
+                                            <div
+                                                class="emoji-box__ico like-ico"
+                                            >
+                                                <img
+                                                    src="img/emoji-like.png"
+                                                    alt="emoji like"
+                                                />
+                                            </div>
+                                            <div
+                                                class="emoji-box__ico heart-ico"
+                                            >
+                                                <img
+                                                    src="img/emoji-heart.png"
+                                                    alt="emoji heart"
+                                                />
+                                            </div>
+                                            <div class="emoji-box__ico wow-ico">
+                                                <img
+                                                    src="img/emoji-wow.png"
+                                                    alt="emoji wow"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="emoji-box__like-count"
+                                        ></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Comment -->
+                    <div class="comment-wrap answer-inc siblings-wrap">
+                        <div class="comment">
+                            <div class="comment__author-pic">
+                                <img src="img/c2.jpg" alt="author avatar" />
+                            </div>
+                            <div class="comment__wrap">
+                                <div class="comment__body">
+                                    <div class="comment__author-name">
+                                        Collins Juma
+                                    </div>
+                                    <div class="comment__text">
+                                        My brother from USA says a lot of people
+                                        are using it there. I haven’t tried it,
+                                        but I see only positive reviews
+                                    </div>
+                                </div>
+                                <div class="comment__footer">
+                                    <div class="comment__ui">
+                                        <span class="comment__ui-item"
+                                            >3 hours</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Like</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Reply</span
+                                        >
+                                    </div>
+                                    <div class="emoji-box">
+                                        <div class="emoji-box__emoji-wrap">
+                                            <div
+                                                class="emoji-box__ico like-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-like.png"
+                                                    alt="emoji like"
+                                                />
+                                            </div>
+                                            <div
+                                                class="emoji-box__ico heart-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-heart.png"
+                                                    alt="emoji heart"
+                                                />
+                                            </div>
+                                            <div
+                                                class="emoji-box__ico wow-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-wow.png"
+                                                    alt="emoji wow"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="emoji-box__like-count">
+                                            9
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Comment -->
+                        <div class="comment comment--answer">
+                            <div class="comment__author-pic">
+                                <img src="img/001.jpg" alt="author avatar" />
+                            </div>
+                            <div class="comment__wrap">
+                                <div class="comment__body">
+                                    <div class="comment__author-name">
+                                        Isaac Kibet
+                                    </div>
+                                    <div class="comment__text">
+                                        As always, everything comes to us with a
+                                        delay ... Long Jack XXXL I’m feeling
+                                        very secure now and my wife has not
+                                        stopped thanking me for not given up
+                                        hope to save our marriage.
+                                    </div>
+                                </div>
+                                <div class="comment__footer">
+                                    <div class="comment__ui">
+                                        <span class="comment__ui-item"
+                                            >2 hours</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Like</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Reply</span
+                                        >
+                                    </div>
+                                    <div class="emoji-box">
+                                        <div class="emoji-box__emoji-wrap">
+                                            <div
+                                                class="emoji-box__ico like-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-like.png"
+                                                    alt="emoji like"
+                                                />
+                                            </div>
+                                            <div
+                                                class="emoji-box__ico heart-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-heart.png"
+                                                    alt="emoji heart"
+                                                />
+                                            </div>
+                                            <div class="emoji-box__ico wow-ico">
+                                                <img
+                                                    src="img/emoji-wow.png"
+                                                    alt="emoji wow"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="emoji-box__like-count">
+                                            4
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Comment -->
+                    <div class="comment-wrap answer-inc siblings-wrap">
+                        <div class="comment">
+                            <div class="comment__author-pic">
+                                <img src="img/c6.jpg" alt="author avatar" />
+                            </div>
+                            <div class="comment__wrap">
+                                <div class="comment__body">
+                                    <div class="comment__author-name">
+                                        Erick Koech
+                                    </div>
+                                    <div class="comment__text">
+                                        I have a two-weeks experience of taking
+                                        Long Jack XXXL, I can confirm that it is
+                                        super-effective. I was diagnosed with
+                                        erectile dysfunction, but Long Jack XXXL
+                                        cured it! Thanks for sharing your story!
+                                    </div>
+                                </div>
+                                <div class="comment__footer">
+                                    <div class="comment__ui">
+                                        <span class="comment__ui-item"
+                                            >3 hours</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Like</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Reply</span
+                                        >
+                                    </div>
+                                    <div class="emoji-box">
+                                        <div class="emoji-box__emoji-wrap">
+                                            <div
+                                                class="emoji-box__ico like-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-like.png"
+                                                    alt="emoji like"
+                                                />
+                                            </div>
+                                            <div
+                                                class="emoji-box__ico heart-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-heart.png"
+                                                    alt="emoji heart"
+                                                />
+                                            </div>
+                                            <div
+                                                class="emoji-box__ico wow-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-wow.png"
+                                                    alt="emoji wow"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="emoji-box__like-count">
+                                            11
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Comment -->
+                        <div class="comment comment--answer">
+                            <div class="comment__author-pic">
+                                <img
+                                    src="img/author-avatar.jpg"
+                                    alt="author avatar"
+                                />
+                            </div>
+                            <div class="comment__wrap">
+                                <div class="comment__body">
+                                    <div class="comment__author-name">
+                                        Sharon
+                                    </div>
+                                    <div class="comment__text">
+                                        Very glad that my story helped you
+                                    </div>
+                                </div>
+                                <div class="comment__footer">
+                                    <div class="comment__ui">
+                                        <span class="comment__ui-item"
+                                            >2 hours</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Like</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Reply</span
+                                        >
+                                    </div>
+                                    <div class="emoji-box">
+                                        <div class="emoji-box__emoji-wrap">
+                                            <div
+                                                class="emoji-box__ico like-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-like.png"
+                                                    alt="emoji like"
+                                                />
+                                            </div>
+                                            <div
+                                                class="emoji-box__ico heart-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-heart.png"
+                                                    alt="emoji heart"
+                                                />
+                                            </div>
+                                            <div
+                                                class="emoji-box__ico wow-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-wow.png"
+                                                    alt="emoji wow"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="emoji-box__like-count">
+                                            9
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Comment -->
+                    <div
+                        class="comment-wrap answer-inc siblings-wrap line-hider"
+                    >
+                        <div class="comment">
+                            <div class="comment__author-pic">
+                                <img src="img/c10.jpg" alt="author avatar" />
+                            </div>
+                            <div class="comment__wrap">
+                                <div class="comment__body">
+                                    <div class="comment__author-name">
+                                        Brenda Korir
+                                    </div>
+                                    <div class="comment__text">
+                                        Thanks for the information, I ordered
+                                        one for my husband. We got it yesterday
+                                        and are already surprised by the result.
+                                        Effect is visible after the first
+                                        intake!
+                                    </div>
+                                </div>
+                                <div class="comment__footer">
+                                    <div class="comment__ui">
+                                        <span class="comment__ui-item"
+                                            >3 hours</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Like</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Reply</span
+                                        >
+                                    </div>
+                                    <div class="emoji-box">
+                                        <div class="emoji-box__emoji-wrap">
+                                            <div
+                                                class="emoji-box__ico like-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-like.png"
+                                                    alt="emoji like"
+                                                />
+                                            </div>
+                                            <div
+                                                class="emoji-box__ico heart-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-heart.png"
+                                                    alt="emoji heart"
+                                                />
+                                            </div>
+                                            <div
+                                                class="emoji-box__ico wow-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-wow.png"
+                                                    alt="emoji wow"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="emoji-box__like-count">
+                                            14
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Comment -->
+                        <div
+                            class="comment comment--answer answer-wrap"
+                            data-id="2"
+                        >
+                            <div class="comment__author-pic">
+                                <img
+                                    src="img/author-avatar.jpg"
+                                    alt="author avatar"
+                                />
+                            </div>
+                            <div class="comment__wrap">
+                                <div class="comment__body">
+                                    <div class="comment__author-name">
+                                        Sharon
+                                    </div>
+                                    <div class="comment__text typing-block">
+                                        typing a comment
+                                        <span class="appear">.</span>
+                                        <span class="appear">.</span>
+                                        <span class="appear">.</span>
+                                    </div>
+                                    <div class="comment__text typed-text">
+                                        Enjoy 😉
+                                    </div>
+                                </div>
+                                <div class="comment__footer additional-block">
+                                    <div class="comment__ui">
+                                        <span class="comment__ui-item"
+                                            >Just now</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Like</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Reply</span
+                                        >
+                                    </div>
+                                    <div class="emoji-box">
+                                        <div class="emoji-box__emoji-wrap">
+                                            <div
+                                                class="emoji-box__ico like-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-like.png"
+                                                    alt="emoji like"
+                                                />
+                                            </div>
+                                            <div
+                                                class="emoji-box__ico heart-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-heart.png"
+                                                    alt="emoji heart"
+                                                />
+                                            </div>
+                                            <div class="emoji-box__ico wow-ico">
+                                                <img
+                                                    src="img/emoji-wow.png"
+                                                    alt="emoji wow"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="emoji-box__like-count">
+                                            4
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Comment -->
+                    <div class="comment-wrap answer-inc siblings-wrap">
+                        <div class="comment">
+                            <div class="comment__author-pic">
+                                <img src="img/c14.jpg" alt="author avatar" />
+                            </div>
+                            <div class="comment__wrap">
+                                <div class="comment__body">
+                                    <div class="comment__author-name">
+                                        Felix Chege
+                                    </div>
+                                    <div class="comment__text">
+                                        Wife doesn’t understand what has
+                                        happened) But she likes it! We even
+                                        stopped arguing all the time) Ordered it
+                                        on the official website, delivery is
+                                        always on time.
+                                        <img
+                                            src="img/post-img-test.jpg"
+                                            alt="author's photo"
+                                            class="comment__img"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="comment__footer">
+                                    <div class="comment__ui">
+                                        <span class="comment__ui-item"
+                                            >3 hours</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Like</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Reply</span
+                                        >
+                                    </div>
+                                    <div class="emoji-box">
+                                        <div class="emoji-box__emoji-wrap">
+                                            <div
+                                                class="emoji-box__ico like-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-like.png"
+                                                    alt="emoji like"
+                                                />
+                                            </div>
+                                            <div
+                                                class="emoji-box__ico heart-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-heart.png"
+                                                    alt="emoji heart"
+                                                />
+                                            </div>
+                                            <div
+                                                class="emoji-box__ico wow-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-wow.png"
+                                                    alt="emoji wow"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="emoji-box__like-count">
+                                            14
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Comment -->
+                        <div class="comment comment--answer">
+                            <div class="comment__author-pic">
+                                <img src="img/003.jpg" alt="author avatar" />
+                            </div>
+                            <div class="comment__wrap">
+                                <div class="comment__body">
+                                    <div class="comment__author-name">
+                                        Hassan Waweru
+                                    </div>
+                                    <div class="comment__text">
+                                        I am a skeptic, but I will still try,
+                                        because you need to fight whenever
+                                        possible.
+                                        <a href="#toform" class="prod-link"
+                                            >LONG JACK XXXL</a
+                                        >
+                                    </div>
+                                </div>
+                                <div class="comment__footer">
+                                    <div class="comment__ui">
+                                        <span class="comment__ui-item"
+                                            >2 hours</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Like</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Reply</span
+                                        >
+                                    </div>
+                                    <div class="emoji-box">
+                                        <div class="emoji-box__emoji-wrap">
+                                            <div
+                                                class="emoji-box__ico like-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-like.png"
+                                                    alt="emoji like"
+                                                />
+                                            </div>
+                                            <div
+                                                class="emoji-box__ico heart-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-heart.png"
+                                                    alt="emoji heart"
+                                                />
+                                            </div>
+                                            <div class="emoji-box__ico wow-ico">
+                                                <img
+                                                    src="img/emoji-wow.png"
+                                                    alt="emoji wow"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="emoji-box__like-count">
+                                            4
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Comment -->
+                    <div class="comment-wrap answer-inc siblings-wrap">
+                        <div class="comment">
+                            <div class="comment__author-pic">
+                                <img src="img/c17.jpg" alt="author avatar" />
+                            </div>
+                            <div class="comment__wrap">
+                                <div class="comment__body">
+                                    <div class="comment__author-name">
+                                        Benson Mburu
+                                    </div>
+                                    <div class="comment__text">
+                                        I hope the drug will help everyone like
+                                        it helped me!
+                                    </div>
+                                </div>
+                                <div class="comment__footer">
+                                    <div class="comment__ui">
+                                        <span class="comment__ui-item"
+                                            >3 hours</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Like</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Reply</span
+                                        >
+                                    </div>
+                                    <div class="emoji-box">
+                                        <div class="emoji-box__emoji-wrap">
+                                            <div
+                                                class="emoji-box__ico like-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-like.png"
+                                                    alt="emoji like"
+                                                />
+                                            </div>
+                                            <div
+                                                class="emoji-box__ico heart-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-heart.png"
+                                                    alt="emoji heart"
+                                                />
+                                            </div>
+                                            <div
+                                                class="emoji-box__ico wow-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-wow.png"
+                                                    alt="emoji wow"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="emoji-box__like-count">
+                                            18
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Comment -->
+                        <div class="comment comment--answer">
+                            <div class="comment__author-pic">
+                                <img
+                                    src="img/author-avatar.jpg"
+                                    alt="author avatar"
+                                />
+                            </div>
+                            <div class="comment__wrap">
+                                <div class="comment__body">
+                                    <div class="comment__author-name">
+                                        Sharon
+                                    </div>
+                                    <div class="comment__text">
+                                        Glad you got it all sorted 😉
+                                    </div>
+                                </div>
+                                <div class="comment__footer">
+                                    <div class="comment__ui">
+                                        <span class="comment__ui-item"
+                                            >2 hours</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Like</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Reply</span
+                                        >
+                                    </div>
+                                    <div class="emoji-box">
+                                        <div class="emoji-box__emoji-wrap">
+                                            <div
+                                                class="emoji-box__ico like-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-like.png"
+                                                    alt="emoji like"
+                                                />
+                                            </div>
+                                            <div
+                                                class="emoji-box__ico heart-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-heart.png"
+                                                    alt="emoji heart"
+                                                />
+                                            </div>
+                                            <div class="emoji-box__ico wow-ico">
+                                                <img
+                                                    src="img/emoji-wow.png"
+                                                    alt="emoji wow"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="emoji-box__like-count">
+                                            4
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Comment -->
+                    <div class="comment-wrap answer-inc siblings-wrap">
+                        <div class="comment">
+                            <div class="comment__author-pic">
+                                <img src="img/005.jpg" alt="author avatar" />
+                            </div>
+                            <div class="comment__wrap">
+                                <div class="comment__body">
+                                    <div class="comment__author-name">
+                                        Julius Kioko
+                                    </div>
+                                    <div class="comment__text">
+                                        I decided to make an experiment) As soon
+                                        as it got delivered, I took it and went
+                                        to my girlfriend. We had sex for 3
+                                        hours! I am in shock! I never had
+                                        anything like this before
+                                        <img
+                                            src="img/2.jpg"
+                                            alt="author's photo"
+                                            class="comment__img"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="comment__footer">
+                                    <div class="comment__ui">
+                                        <span class="comment__ui-item"
+                                            >5 hours</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Like</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Reply</span
+                                        >
+                                    </div>
+                                    <div class="emoji-box">
+                                        <div class="emoji-box__emoji-wrap">
+                                            <div
+                                                class="emoji-box__ico like-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-like.png"
+                                                    alt="emoji like"
+                                                />
+                                            </div>
+                                            <div
+                                                class="emoji-box__ico heart-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-heart.png"
+                                                    alt="emoji heart"
+                                                />
+                                            </div>
+                                            <div
+                                                class="emoji-box__ico wow-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-wow.png"
+                                                    alt="emoji wow"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="emoji-box__like-count">
+                                            29
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Comment -->
+                    <div class="comment-wrap answer-inc siblings-wrap">
+                        <div class="comment">
+                            <div class="comment__author-pic">
+                                <img src="img/c20.jpg" alt="author avatar" />
+                            </div>
+                            <div class="comment__wrap">
+                                <div class="comment__body">
+                                    <div class="comment__author-name">
+                                        Benard Wachira
+                                    </div>
+                                    <div class="comment__text">
+                                        I can’t understand where can I order it
+                                    </div>
+                                </div>
+                                <div class="comment__footer">
+                                    <div class="comment__ui">
+                                        <span class="comment__ui-item"
+                                            >6 hours</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Like</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Reply</span
+                                        >
+                                    </div>
+                                    <div class="emoji-box">
+                                        <div class="emoji-box__emoji-wrap">
+                                            <div
+                                                class="emoji-box__ico like-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-like.png"
+                                                    alt="emoji like"
+                                                />
+                                            </div>
+                                            <div
+                                                class="emoji-box__ico heart-ico"
+                                            >
+                                                <img
+                                                    src="img/emoji-heart.png"
+                                                    alt="emoji heart"
+                                                />
+                                            </div>
+                                            <div
+                                                class="emoji-box__ico wow-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-wow.png"
+                                                    alt="emoji wow"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="emoji-box__like-count">
+                                            5
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Comment -->
+                        <div class="comment comment--answer">
+                            <div class="comment__author-pic">
+                                <img src="img/004.jpg" alt="author avatar" />
+                            </div>
+                            <div class="comment__wrap">
+                                <div class="comment__body">
+                                    <div class="comment__author-name">
+                                        Philip Mutinda
+                                    </div>
+                                    <div class="comment__text">
+                                        Here is the
+                                        <a href="#toform" class="prod-link"
+                                            >link</a
+                                        >
+                                    </div>
+                                </div>
+                                <div class="comment__footer">
+                                    <div class="comment__ui">
+                                        <span class="comment__ui-item"
+                                            >7 hours</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Like</span
+                                        >
+                                        <span class="comment__ui-item"
+                                            >Reply</span
+                                        >
+                                    </div>
+                                    <div class="emoji-box">
+                                        <div class="emoji-box__emoji-wrap">
+                                            <div
+                                                class="emoji-box__ico like-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-like.png"
+                                                    alt="emoji like"
+                                                />
+                                            </div>
+                                            <div
+                                                class="emoji-box__ico heart-ico active"
+                                            >
+                                                <img
+                                                    src="img/emoji-heart.png"
+                                                    alt="emoji heart"
+                                                />
+                                            </div>
+                                            <div class="emoji-box__ico wow-ico">
+                                                <img
+                                                    src="img/emoji-wow.png"
+                                                    alt="emoji wow"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="emoji-box__like-count">
+                                            8
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Order Buttton -->
+                <a href="#toform" class="order-btn order-btn--bottom"
+                    >Order Long Jack XXXL</a
+                >
+            </main>
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- About Block -->
+                <div class="about">
+                    <div class="sidebar-section-title">About me</div>
+                    <div class="about__img">
+                        <img src="img/author-avatar.jpg" alt="author avatar" />
+                    </div>
+                    <p class="about__title">Hi I'm Sharon</p>
+                    <p class="about__text">
+                        I’m from Nairobi and this is my mini-blog where I talk
+                        about my life, experiences, and inspirations.
+                    </p>
+                </div>
+                <!-- Categories -->
+                <div class="categories">
+                    <div class="sidebar-section-title">categories</div>
+
+                    <a href="#toform" class="category">
+                        <p class="category__name">Lifestyle</p>
+                        <p class="category__count">(5)</p>
+                    </a>
+                    <a href="#toform" class="category">
+                        <p class="category__name">Culture</p>
+                        <p class="category__count">(9)</p>
+                    </a>
+                    <a href="#toform" class="category">
+                        <p class="category__name">Travel</p>
+                        <p class="category__count">(1)</p>
+                    </a>
+                    <a href="#toform" class="category">
+                        <p class="category__name">Fashion</p>
+                        <p class="category__count">(15)</p>
                     </a>
                 </div>
-            </div>
+                <!-- Recent Posts -->
+                <div class="posts">
+                    <div class="sidebar-section-title">recent posts</div>
 
-        </div>
-
-    </div>
-</header>
-
-<div class="container content">
-    <main class="main">
-        <article class="article">
-
-            <img src="img/article-img1.jpg" alt="" class="article-img first-img">
-
-            <h2 class="article__title">
-                We were on the verge of divorce because of the weak potency of my husband! But our family was miraculously saved.
-                Now he can 4-6 times a night!
-                <div class="article__author">Published <script>dtime_me(-8, true);</script> Author: Sharon</div>
-            </h2>
-
-            <p class="article__p">
-                Hello! You may remember that I used to make complaints about my husband about 6 months ago. Sex is so unsatisfactory
-                as we could not reach the ‘top’? Even when I use my mouth, the penis did not show any sign of erection, or the
-                erection does not last long, only from 1-3 minutes at most!
-            </p>
-
-            <p class="article__p">
-                When I see pornography – I realize that all guys own a firm penis, which is always ready to ‘do it’.
-            </p>
-
-            <p class="article__p">
-                I took your advice, my husband also found all ways: including Viagra and tons of other erectile dysfunction drugs
-                as well as exercising yoga to help increase the feelings of sex. But all ended up in vain!
-            </p>
-
-            <p class="article__p last-p">
-                At last, I decided to live with it and I took credit for genetic factors and body’s functions of each person! I
-                accepted the fact that the situation were caused by genetic factors and I saw that my husband lost all of his
-                confidence when we discussed about this sensitive problems. Thus, even I didn’t have any desire for sex with
-                my husband as I always anticipated the disastrous outcomes after sex when I could not feel satisfy, and my
-                husband felt depressed.
-            </p>
-
-            <img src="img/article-img2.jpg" alt="" class="article-img">
-
-            <h2 class="article__title">Then a surprise came…</h2>
-
-            <p class="article__p">
-                Sometimes, a smallest ocasion can change a life. My entire life took a 180 turn after just one party.
-            </p>
-
-            <p class="article__p">
-                Yeah, it feels like a comedy sketch, but hear me out. A couple of months ago, our new neighbour knocked on our doors
-                to invite us to the party. She seemed alright and me and my husband agreed. After all, there was not much to do outside
-                because of all the quarantine restrictions and we both felt we’ll be glad to meet new people.
-            </p>
-
-            <p class="article__p">
-                When we arrived, there were a whole lot of new folks we had never seen before. After making some rounds, I noticed a
-                strange couple. Why would a father and a daughter go to a party? I mean, she was super young for his age so they
-                probably were not together.
-            </p>
-
-            <p class="article__p">
-                I asked our neighbor about them. “Oh, you’re not the first to think so,” she replied. “Everybody thinks this way,
-                because he is 30 years older than her.”
-            </p>
-
-            <p class="article__p">
-                Excuse me???
-            </p>
-
-            <p class="article__p">
-                I mean, yes, he was older but there is no way, he is THIRTY years older! He looks like he is 45 at best. Anyway,
-                the neighbor proceeded to explain. She said they fell in love because he is so kind and a great man in general.
-                Plus, you can’t deny he is in a great physical form. Not just for his age. I bet he could be a goddamn model if he
-                was in his twenties. I bet he has a killer set of abs too.
-            </p>
-
-            <p class="article__p">
-                After several cocktails, I was still curious about them. Alright, he looks hot and all but is everything so smooth?
-                Men in their later years tend to have some problems with performance. Like, bedroom performance. A girl in her
-                twenties probably has a greater appetite than he could satisfy.
-            </p>
-
-            <p class="article__p">
-                As I said, I had a couple of cocktails so I was not able to stop myself before I came to the girl and asked her
-                directly. Thank God, she understood my condition and decided not to start a scene. She explained, really calmly
-                that, actually, yes, there was a time her partner had issues during sex. However, she just ordered Long jack
-                XXXL and the troubles were gone like magic.
-            </p>
-
-            <p class="article__p last-p">
-                I was drunk but this information got stuck in my head for the entire next week. Not like I am complaining about
-                my husband, but he needs some help once in a while. I tried looking for Long Jack XXXL but no pharmacy ever heard
-                of that. Turns out, it is only sold directly by a manufacturer through their website. Well, that is even better
-                in my opinion. There are no extras on the price from pharmacies and you can be sure the product is always original.
-                So, I easily ordered some Long Jack XXXL.
-            </p>
-
-            <img src="img/-img3.jpg" alt="" class="article-img">
-
-            <h2 class="article__title">How was the result?</h2>
-
-            <p class="article__p">
-                I opened the product, read the instruction and told my husband to use it..
-            </p>
-
-            <p class="article__p">
-                <b>On the second day of using, his penis was so ready with impressive size inside his trousers.</b>
-            </p>
-
-            <p class="article__p">
-                He can’t help rushing into me: we had sex during 1 hours and 47 minutes. His penis was as solid as IRON during the whole
-                intercourse! When we reached orgasm, oh my god… WE BOTH SCREAMED AND IT SEEMED LIKE THE HOUSE WAS SHAKING, THAT WAS
-                AWESOME!!! I have never experienced such a wonderful feelings like that throughout my entire life! Of course, I hoped the
-                product would work. But I did not think that it was so amazing. EXTREMELY powerful…
-            </p>
-
-            <div class="quote">
-                <div class="quote__symbol">“</div>
-                <div class="quote__text">dont hesitate spending money for good things.</div>
-            </div>
-
-            <p class="article__p last-p">
-                But it was the truth, I could not believe that this product could influence so significantly on the body. My husband was
-                able to regain self-confidence and my respect for him in a short time! You can judge the price of the product yourself,
-                but if it can change your life for good, why not?
-            </p>
-
-            <img src="img/article-img4.jpg" alt="" class="article-img article-img--last">
-
-        </article>
-
-
-        <span id="toform"></span>
-        <div class="features-wrapper">
-            <div class="spin-wrapper">
-                <div class="wheel-text">
-                    <p class="wheel-title">Caution!</p>
-                    <p class="wheel-p">
-                        Visitors to our website have the exclusive opportunity to order.
-                    </p>
-                    <p class="wheel-p highlight">
-                        Long Jack XXXL up to 50% cheaper!
-                    </p>
-                    <p class="wheel-p">
-                        To do this, start the wheel of fortune by pressing the "SPIN" button and then wait for it to stop completely. Who knows,
-                        maybe you are the lucky guy who can save a lot of money today! Good luck!
-                    </p>
-                </div>
-                <div class="wheel-wrapper">
-                    <div class="wheel">
-                        <img alt class="wheel-img" src="img/prizewheel.svg"/>
-                        <div class="wheel-cursor">
-                            <img alt src="img/wheel-cursor.png"/><span class="cursor-text">
-                    SPIN</span>
+                    <a href="#toform" class="post">
+                        <span class="post__counter">1</span>
+                        <div class="post__img">
+                            <img src="img/post-img-test1.jpg" alt="woman" />
                         </div>
+                        <div class="post__body">
+                            <p class="post__title">
+                                How to grow in self confidence
+                            </p>
+                            <div class="post__footer">
+                                <p class="post__author">Sharon Otieno</p>
+                                <p class="post__date">
+                                    <script>
+                                        dtime_mt(-1);
+                                    </script>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#toform" class="post">
+                        <span class="post__counter">2</span>
+                        <div class="post__img">
+                            <img src="img/post-img-test2.jpg" alt="woman" />
+                        </div>
+                        <div class="post__body">
+                            <p class="post__title">Success Stories</p>
+                            <div class="post__footer">
+                                <p class="post__author">Sharon Otieno</p>
+                                <p class="post__date">
+                                    <script>
+                                        dtime_mt(-4);
+                                    </script>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#toform" class="post">
+                        <span class="post__counter">3</span>
+                        <div class="post__img">
+                            <img src="img/post-img-test3.jpg" alt="nature" />
+                        </div>
+                        <div class="post__body">
+                            <p class="post__title">
+                                Awesome Breathtaking Places
+                            </p>
+                            <div class="post__footer">
+                                <p class="post__author">Sharon Otieno</p>
+                                <p class="post__date">
+                                    <script>
+                                        dtime_mt(-9);
+                                    </script>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Tags -->
+                <div class="tags">
+                    <div class="sidebar-section-title">tags</div>
+                    <div class="tags__body">
+                        <a href="#toform" class="tag">Culture</a>
+                        <a href="#toform" class="tag">Trip</a>
+                        <a href="#toform" class="tag">Trends</a>
+                        <a href="#toform" class="tag">Fashion</a>
+                        <a href="#toform" class="tag">Lifestyle</a>
+                        <a href="#toform" class="tag">Exploration</a>
+                        <a href="#toform" class="tag">Food</a>
+                        <a href="#toform" class="tag">Stories</a>
                     </div>
                 </div>
-                <p class="offer-date">Offer valid until (inclusive): <span class="highlight"><script>dtime_m32e(0, true);</script></span></p>
-            </div>
-
-            <div class="order_block" style="display: none">
-                <p class="offer-date">Offer valid until (inclusive): <span class="highlight"><script>dtime_me(0, true);</script></span></p>
-                <div class="order-info">
-                    <div class="order-info__product">
-                        <img src="img/product2.png" alt="">
+                <!-- Recommend Block -->
+                <div class="recommend">
+                    <div class="sidebar-section-title">i recommend</div>
+                    <div class="recommend__body">
+                        <a href="#toform" class="recommend__img-link">
+                            <img
+                                src="img/sidebar-prod.png"
+                                alt="long jack bottle"
+                            />
+                        </a>
+                        <div class="recommend__text-wrap">
+                            <p class="recommend__title">Long Jack XXXL</p>
+                            <ul class="recommend__list">
+                                <li class="recommend__list-item">
+                                    Nature ingridients.
+                                </li>
+                                <li class="recommend__list-item">
+                                    Increases libido and sexual gratification.
+                                </li>
+                                <li class="recommend__list-item">
+                                    Gives intense orgasm.
+                                </li>
+                                <li class="recommend__list-item">
+                                    Stimulates growth and maximizes hardness.
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="order-info__price-wrap">
-                        <img src="img/discount-label.png" alt="">
-                        <div class="x_currency_old">{OLD_PRICE}</div>
-                        <div class="x_currency">{PRICE}</div>
-                    </div>
+                    <a href="#toform" class="order-btn-mobile"
+                        >Order Long Jack XXXL</a
+                    >
                 </div>
-                <form action="" class="form_order" method="post">
-                    <div class="target_list_wrap">
-                        <select class="js-select form-item" name="target_geo_hash">
-                        </select>
-                    </div>
-                    <select required="" name="custom[city]" id="" class="form-item">
-                        <option value="">Choose city</option>
-                        <option value="Nairobi">Nairobi</option>
-                        <option value="Mombasa">Mombasa</option>
-                        <option value="Kisumu">Kisumu</option>
-                        <option value="nakuru">Nakuru</option>
-                        <option value="other">Other</option>
-                    </select>
-
-                    <input class="form-item" name="client" placeholder="Name" type="text">
-                    <input class="form-item" name="phone" placeholder="Phone number" type="text">
-
-                    <button type="submit" class="submit-form">
-                        ORDER
-                    </button>
-
-                </form>
-
-                <div class="packs-left">
-                    <p class="packs-left__title">Data is updated in real time</p>
-                    <p class="packs-left__title highlight">Promotional 50% discount packages left:</p>
-                    <p class="packs-left__value">
-                        <span class="highlight">05</span>
-                        packs
-                    </p>
-                </div>
-            </div>
-
-            <div class="spin-result-wrapper" style="display: none">
-                <div class="pop-up-window">
-                    <div class="close-popup"></div>
-                    <span class="pop-up-heading lt71"> Congratulations!</span>
-                    <p class="ruletka-p pop-up-text lt72">
-                        You get 50% off discount on Long Jack XXXL!
-                    </p>
-                    <button type="submit" class="pop-up-button lt73">OK</button>
-                </div>
-            </div>
-        </div>
-
-
-        <img src="img/certificate.jpg" alt="" class="article-img certificate">
-
-
-        <div class="comments">
-            <div class="comments__title">Most recent comments <img src="img/rrangle-down.svg" alt=""></div>
-
-            <div class="comment-wrap">
-                <div class="comment">
-                    <div class="comment__author-pic">
-                        <img src="img/aw1.jpg" alt="">
-                    </div>
-                    <div class="comment__wrap">
-                        <div class="comment__body">
-                            <div class="comment__author-name">Elizabeth Ndung'u</div>
-                            <div class="comment__text">
-                                One of my friends ordered it and was satisfied with the result 😍
-                            </div>
-                        </div>
-                        <div class="comment__footer">
-                            <div class="comment__ui">
-                                <span class="comment__ui-item">1 min ago</span>
-                                <span class="comment__ui-item">Like</span>
-                                <span class="comment__ui-item">Reply</span>
-                            </div>
-                            <div class="emoji-box active" emoji-id="3">
-                                <div class="emoji-box__emoji-wrap">
-                                    <div class="emoji-box__ico like-ico">
-                                        <img src="img/emoji-like.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico heart-ico active">
-                                        <img src="img/emoji-heart.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico wow-ico">
-                                        <img src="img/emoji-wow.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="emoji-box__like-count">1</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="comment-wrap answer-inc siblings-wrap line-hider">
-
-                <div class="comment">
-                    <div class="comment__author-pic">
-                        <img src="img/c1.jpg" alt="">
-                    </div>
-                    <div class="comment__wrap">
-                        <div class="comment__body">
-                            <div class="comment__author-name">Ann Mwagi</div>
-                            <div class="comment__text">
-                                I lived with my ex-boyfriend for 5 years, and all that time I didn’t like having sex
-                                because of his weak boner. As a result, we broke up, and I met the man of my dreams.
-                                He shocked me in bed: he can have sex for hours and his penis is hard as stone! He
-                                recently told me that Long Jack XXXL gives him so much energy) 💪👍😎
-                                <img src="img/image-1.jpg" class="comment__img" alt="">
-                            </div>
-                        </div>
-                        <div class="comment__footer">
-                            <div class="comment__ui">
-                                <span class="comment__ui-item">1 hour</span>
-                                <span class="comment__ui-item">Like</span>
-                                <span class="comment__ui-item">Reply</span>
-                            </div>
-                            <div class="emoji-box active" emoji-id="1">
-                                <div class="emoji-box__emoji-wrap">
-                                    <div class="emoji-box__ico like-ico active">
-                                        <img src="img/emoji-like.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico heart-ico">
-                                        <img src="img/emoji-heart.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico wow-ico">
-                                        <img src="img/emoji-wow.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="emoji-box__like-count">2</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="comment comment--answer answer-wrap" data-id="1">
-                    <div class="comment__author-pic">
-                        <img src="img/005.jpg" alt="">
-                    </div>
-                    <div class="comment__wrap">
-                        <div class="comment__body">
-                            <div class="comment__author-name">Joyce Ali</div>
-                            <div class="comment__text typing-block">
-                                typing a comment
-                                <span class="appear">.</span>
-                                <span class="appear">.</span>
-                                <span class="appear">.</span>
-                            </div>
-                            <div class="comment__text typed-text">
-                                I ordered - my husband will have a birthday present))) why give something that is useless, right?
-                            </div>
-                        </div>
-                        <div class="comment__footer additional-block">
-                            <div class="comment__ui">
-                                <span class="comment__ui-item">Just now</span>
-                                <span class="comment__ui-item">Like</span>
-                                <span class="comment__ui-item">Reply</span>
-                            </div>
-                            <div class="emoji-box active" emoji-id="2">
-                                <div class="emoji-box__emoji-wrap">
-                                    <div class="emoji-box__ico like-ico">
-                                        <img src="img/emoji-like.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico heart-ico">
-                                        <img src="img/emoji-heart.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico wow-ico">
-                                        <img src="img/emoji-wow.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="emoji-box__like-count"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div class="comment-wrap answer-inc siblings-wrap">
-
-                <div class="comment">
-                    <div class="comment__author-pic">
-                        <img src="img/c2.jpg" alt="">
-                    </div>
-                    <div class="comment__wrap">
-                        <div class="comment__body">
-                            <div class="comment__author-name">Collins Juma</div>
-                            <div class="comment__text">
-                                My brother from USA says a lot of people are using it there. I haven’t tried it, but I see only positive reviews
-                            </div>
-                        </div>
-                        <div class="comment__footer">
-                            <div class="comment__ui">
-                                <span class="comment__ui-item">3 hours</span>
-                                <span class="comment__ui-item">Like</span>
-                                <span class="comment__ui-item">Reply</span>
-                            </div>
-                            <div class="emoji-box">
-                                <div class="emoji-box__emoji-wrap">
-                                    <div class="emoji-box__ico like-ico active">
-                                        <img src="img/emoji-like.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico heart-ico active">
-                                        <img src="img/emoji99-heart.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico wow-ico active">
-                                        <img src="img/emoji-wow.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="emoji-box__like-count">9</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="comment comment--answer">
-                    <div class="comment__author-pic">
-                        <img src="img/001.jpg" alt="">
-                    </div>
-                    <div class="comment__wrap">
-                        <div class="comment__body">
-                            <div class="comment__author-name">Isaac Kibet</div>
-                            <div class="comment__text">
-                                As always, everything comes to us with a delay ... Long Jack XXXL I’m feeling very
-                                secure now and my wife has not stopped thanking me for not given up hope to save
-                                our marriage.
-                            </div>
-                        </div>
-                        <div class="comment__footer">
-                            <div class="comment__ui">
-                                <span class="comment__ui-item">2 hours</span>
-                                <span class="comment__ui-item">Like</span>
-                                <span class="comment__ui-item">Reply</span>
-                            </div>
-                            <div class="emoji-box">
-                                <div class="emoji-box__emoji-wrap">
-                                    <div class="emoji-box__ico like-ico active">
-                                        <img src="img/emoji-like.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico heart-ico active">
-                                        <img src="img/emoji-heart.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico wow-ico">
-                                        <img src="img/emoji-wow.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="emoji-box__like-count">4</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-
-            <div class="comment-wrap answer-inc siblings-wrap">
-
-                <div class="comment">
-                    <div class="comment__author-pic">
-                        <img src="img/c6.jpg" alt="">
-                    </div>
-                    <div class="comment__wrap">
-                        <div class="comment__body">
-                            <div class="comment__author-name">Erick Koech</div>
-                            <div class="comment__text">
-                                I have a two-weeks experience of taking Long Jack XXXL, I can confirm that it is super-effective.
-                                I was diagnosed with erectile dysfunction, but Long Jack XXXL cured it! Thanks for sharing your story!
-                            </div>
-                        </div>
-                        <div class="comment__footer">
-                            <div class="comment__ui">
-                                <span class="comment__ui-item">3 hours</span>
-                                <span class="comment__ui-item">Like</span>
-                                <span class="comment__ui-item">Reply</span>
-                            </div>
-                            <div class="emoji-box">
-                                <div class="emoji-box__emoji-wrap">
-                                    <div class="emoji-box__ico like-ico active">
-                                        <img src="img/emoji-like.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico heart-ico active">
-                                        <img src="img/emoji-heart.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico wow-ico active">
-                                        <img src="img/emoji-wow.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="emoji-box__like-count">11</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="comment comment--answer">
-                    <div class="comment__author-pic">
-                        <img src="img/author-avatar.jpg" alt="">
-                    </div>
-                    <div class="comment__wrap">
-                        <div class="comment__body">
-                            <div class="comment__author-name">Sharon</div>
-                            <div class="comment__text">
-                                Very glad that my story helped you
-                            </div>
-                        </div>
-                        <div class="comment__footer">
-                            <div class="comment__ui">
-                                <span class="comment__ui-item">2 hours</span>
-                                <span class="comment__ui-item">Like</span>
-                                <span class="comment__ui-item">Reply</span>
-                            </div>
-                            <div class="emoji-box">
-                                <div class="emoji-box__emoji-wrap">
-                                    <div class="emoji-box__ico like-ico active">
-                                        <img src="img/emoji-like.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico heart-ico active">
-                                        <img src="img/emoji-heart.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico wow-ico active">
-                                        <img src="img/emoji-wow.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="emoji-box__like-count">9</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div class="comment-wrap answer-inc siblings-wrap line-hider">
-
-                <div class="comment">
-                    <div class="comment__author-pic">
-                        <img src="img/c10.jpg" alt="">
-                    </div>
-                    <div class="comment__wrap">
-                        <div class="comment__body">
-                            <div class="comment__author-name">Brenda Korir</div>
-                            <div class="comment__text">
-                                Thanks for the information, I ordered one for my husband. We got it yesterday
-                                and are already surprised by the result. Effect is visible after the first intake!
-                            </div>
-                        </div>
-                        <div class="comment__footer">
-                            <div class="comment__ui">
-                                <span class="comment__ui-item">3 hours</span>
-                                <span class="comment__ui-item">Like</span>
-                                <span class="comment__ui-item">Reply</span>
-                            </div>
-                            <div class="emoji-box">
-                                <div class="emoji-box__emoji-wrap">
-                                    <div class="emoji-box__ico like-ico active">
-                                        <img src="img/emoji-like.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico heart-ico active">
-                                        <img src="img/emoji-heart.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico wow-ico active">
-                                        <img src="img/emoji-wow.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="emoji-box__like-count">14</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="comment comment--answer answer-wrap" data-id="2">
-                    <div class="comment__author-pic">
-                        <img src="img/author-avatar.jpg" alt="">
-                    </div>
-                    <div class="comment__wrap">
-                        <div class="comment__body">
-                            <div class="comment__author-name">Sharon</div>
-                            <div class="comment__text typing-block">
-                                typing a comment
-                                <span class="appear">.</span>
-                                <span class="appear">.</span>
-                                <span class="appear">.</span>
-                            </div>
-                            <div class="comment__text typed-text">
-                                Enjoy 😉
-                            </div>
-                        </div>
-                        <div class="comment__footer additional-block">
-                            <div class="comment__ui">
-<!--                                <span class="comment__ui-item">Just now</span>-->
-<!--                                <span class="comment__ui-item">Like</span>-->
-<!--                                <span class="comment__ui-item">Reply</span>-->
-                            </div>
-                            <div class="emoji-box">
-                                <div class="emoji-box__emoji-wrap">
-                                    <div class="emoji-box__ico like-ico active">
-                                        <img src="img/emoji-like.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico heart-ico active">
-                                        <img src="img/emoji-heart.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico wow-ico">
-                                        <img src="img/emoji-wow.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="emoji-box__like-count">4</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-            <div class="comment-wrap answer-inc siblings-wrap">
-
-                <div class="comment">
-                    <div class="comment__author-pic">
-                        <img src="img/c14.jpg" alt="">
-                    </div>
-                    <div class="comment__wrap">
-                        <div class="comment__body">
-                            <div class="comment__author-name">Felix Chege</div>
-                            <div class="comment__text">
-                                Wife doesn’t understand what has happened) But she likes it! We even stopped
-                                arguing all the time) Ordered it on the official website, delivery is always on time.
-                                <img src="img/post-img-test.jpg" alt="" class="comment__img">
-                            </div>
-                        </div>
-                        <div class="comment__footer">
-                            <div class="comment__ui">
-                                <span class="comment__ui-item">3 hours</span>
-                                <span class="comment__ui-item">Like</span>
-                                <span class="comment__ui-item">Reply</span>
-                            </div>
-                            <div class="emoji-box">
-                                <div class="emoji-box__emoji-wrap">
-                                    <div class="emoji-box__ico like-ico active">
-                                        <img src="img/emoji-like.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico heart-ico active">
-                                        <img src="img/emoji-heart.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico wow-ico active">
-                                        <img src="img/emoji-wow.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="emoji-box__like-count">14</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="comment comment--answer">
-                    <div class="comment__author-pic">
-                        <img src="img/003.jpg" alt="">
-                    </div>
-                    <div class="comment__wrap">
-                        <div class="comment__body">
-                            <div class="comment__author-name">Hassan Waweru</div>
-                            <div class="comment__text">
-                                I am a skeptic, but I will still try, because you need to fight whenever possible. <a href="#toform" class="prod-link">LONG JACK XXXL</a>
-                            </div>
-                        </div>
-                        <div class="comment__footer">
-                            <div class="comment__ui">
-                                <span class="comment__ui-item">2 hours</span>
-                                <span class="comment__ui-item">Like</span>
-                                <span class="comment__ui-item">Reply</span>
-                            </div>
-                            <div class="emoji-box">
-                                <div class="emoji-box__emoji-wrap">
-                                    <div class="emoji-box__ico like-ico active">
-                                        <img src="img/emoji-like.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico heart-ico active">
-                                        <img src="img/emoji-heart.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico wow-ico">
-                                        <img src="img/emoji-wow.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="emoji-box__like-count">4</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-            <div class="comment-wrap answer-inc siblings-wrap">
-
-                <div class="comment">
-                    <div class="comment__author-pic">
-                        <img src="img/c17.jpg" alt="">
-                    </div>
-                    <div class="comment__wrap">
-                        <div class="comment__body">
-                            <div class="comment__author-name">Benson Mburu</div>
-                            <div class="comment__text">
-                                I hope the drug will help everyone like it helped me!
-                            </div>
-                        </div>
-                        <div class="comment__footer">
-                            <div class="comment__ui">
-                                <span class="comment__ui-item">3 hours</span>
-                                <span class="comment__ui-item">Like</span>
-                                <span class="comment__ui-item">Reply</span>
-                            </div>
-                            <div class="emoji-box">
-                                <div class="emoji-box__emoji-wrap">
-                                    <div class="emoji-box__ico like-ico active">
-                                        <img src="img/emoji-like.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico heart-ico active">
-                                        <img src="img/emoji-heart.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico wow-ico active">
-                                        <img src="img/emoji-wow.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="emoji-box__like-count">18</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="comment comment--answer">
-                    <div class="comment__author-pic">
-                        <img src="img/author-avatar.jpg" alt="">
-                    </div>
-                    <div class="comment__wrap">
-                        <div class="comment__body">
-                            <div class="comment__author-name">Sharon</div>
-                            <div class="comment__text">
-                                Glad you got it all sorted 😉
-                            </div>
-                        </div>
-                        <div class="comment__footer">
-                            <div class="comment__ui">
-                                <span class="comment__ui-item">2 hours</span>
-                                <span class="comment__ui-item">Like</span>
-                                <span class="comment__ui-item">Reply</span>
-                            </div>
-                            <div class="emoji-box">
-                                <div class="emoji-box__emoji-wrap">
-                                    <div class="emoji-box__ico like-ico active">
-                                        <img src="img/emoji-like.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico heart-ico active">
-                                        <img src="img/emoji-heart.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico wow-ico">
-                                        <img src="img/emoji-wow.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="emoji-box__like-count">4</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div class="comment-wrap">
-                <div class="comment">
-                    <div class="comment__author-pic">
-                        <img src="img/005.jpg" alt="">
-                    </div>
-                    <div class="comment__wrap">
-                        <div class="comment__body">
-                            <div class="comment__author-name">Julius Kioko</div>
-                            <div class="comment__text">
-                                I decided to make an experiment) As soon as it got delivered, I took it and went
-                                to my girlfriend. We had sex for 3 hours! I am in shock! I never had anything like this before
-                                <img src="img/2.jpg" alt="" class="comment__img">
-                            </div>
-                        </div>
-                        <div class="comment__footer">
-                            <div class="comment__ui">
-                                <span class="comment__ui-item">5 hours</span>
-                                <span class="comment__ui-item">Like</span>
-                                <span class="comment__ui-item">Reply</span>
-                            </div>
-                            <div class="emoji-box">
-                                <div class="emoji-box__emoji-wrap">
-                                    <div class="emoji-box__ico like-ico active">
-                                        <img src="img/emoji-like.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico heart-ico active">
-                                        <img src="img/emoji-heart.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico wow-ico active">
-                                        <img src="img/emoji-wow.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="emoji-box__like-count">29</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="comment-wrap answer-inc siblings-wrap">
-
-                <div class="comment">
-                    <div class="comment__author-pic">
-                        <img src="img/c20.jpg" alt="">
-                    </div>
-                    <div class="comment__wrap">
-                        <div class="comment__body">
-                            <div class="comment__author-name">Benard Wachira</div>
-                            <div class="comment__text">
-                                I can’t understand where can I order it
-                            </div>
-                        </div>
-                        <div class="comment__footer">
-                            <div class="comment__ui">
-                                <span class="comment__ui-item">6 hours</span>
-                                <span class="comment__ui-item">Like</span>
-                                <span class="comment__ui-item">Reply</span>
-                            </div>
-                            <div class="emoji-box">
-                                <div class="emoji-box__emoji-wrap">
-                                    <div class="emoji-box__ico like-ico active">
-                                        <img src="img/emoji-like.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico heart-ico">
-                                        <img src="img/emoji-heart.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico wow-ico active">
-                                        <img src="img/emoji-wow.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="emoji-box__like-count">5</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="comment comment--answer">
-                    <div class="comment__author-pic">
-                        <img src="img/004.jpg" alt="">
-                    </div>
-                    <div class="comment__wrap">
-                        <div class="comment__body">
-                            <div class="comment__author-name">Philip Mutinda</div>
-                            <div class="comment__text">
-                                Here is the <a href="#toform" class="prod-link">link</a>
-                            </div>
-                        </div>
-                        <div class="comment__footer">
-                            <div class="comment__ui">
-                                <span class="comment__ui-item">7 hours</span>
-                                <span class="comment__ui-item">Like</span>
-                                <span class="comment__ui-item">Reply</span>
-                            </div>
-                            <div class="emoji-box">
-                                <div class="emoji-box__emoji-wrap">
-                                    <div class="emoji-box__ico like-ico active">
-                                        <img src="img/emoji-like.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico heart-ico active">
-                                        <img src="img/emoji-heart.png" alt="">
-                                    </div>
-                                    <div class="emoji-box__ico wow-ico">
-                                        <img src="img/emoji-wow.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="emoji-box__like-count">8</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-        </div>
-
-        <a href="#toform" class="order-btn order-btn--bottom">Order Long Jack XXXL</a>
-    </main>
-
-    <div class="sidebar">
-
-        <div class="about">
-            <div class="sidebar-section-title">About me</div>
-            <div class="about__img">
-                <img src="img/author-avatar.jpg" alt="">
-            </div>
-            <p class="about__title">Hi I'm Sharon</p>
-            <p class="about__text">
-                I’m from Nairobi and this is my mini-blog where I talk about my life, experiences, and inspirations.
-            </p>
-        </div>
-
-        <div class="categories">
-            <div class="sidebar-section-title">categories</div>
-
-            <a href="#toform" class="category">
-                <p class="category__name">Lifestyle</p>
-                <p class="category__count">(5)</p>
-            </a>
-            <a href="#toform" class="category">
-                <p class="category__name">Culture</p>
-                <p class="category__count">(9)</p>
-            </a>
-            <a href="#toform" class="category">
-                <p class="category__name">Travel</p>
-                <p class="category__count">(1)</p>
-            </a>
-            <a href="#toform" class="category">
-                <p class="category__name">Fashion</p>
-                <p class="category__count">(15)</p>
-            </a>
-        </div>
-
-        <div class="posts">
-            <div class="sidebar-section-title">recent posts</div>
-
-            <a href="#toform" class="post">
-                <span class="post__counter">1</span>
-                <div class="post__img">
-                    <img src="img/post-img-test1.jpg" alt="">
-                </div>
-                <div class="post__body">
-                    <p class="post__title">How to grow in self confidence</p>
-                    <div class="post__footer">
-                        <p class="post__author">Sharon Otieno</p>
-                        <p class="post__date"><script>dtimeds_mt(-1);</script></p>
-                    </div>
-                </div>
-            </a>
-
-            <a href="#toform" class="post">
-                <span class="post__counter">2</span>
-                <div class="post__img">
-                    <img src="img/post-img-test2.jpg" alt="">
-                </div>
-                <div class="post__body">
-                    <p class="post__title">Success Stories</p>
-                    <div class="post__footer">
-                        <p class="post__author">Sharon Otieno</p>
-                        <p class="post__date"><script>dtime_mt(-4);</script></p>
-                    </div>
-                </div>
-            </a>
-
-            <a href="#toform" class="post">
-                <span class="post__counter">3</span>
-                <div class="post__img">
-                    <img src="img/post-img-test3.jpg" alt="">
-                </div>
-                <div class="post__body">
-                    <p class="post__title">Awesome Breathtaking Places</p>
-                    <div class="post__footer">
-                        <p class="post__author">Sharon Otieno</p>
-                        <p class="post__date"><script>dtime_mt(-9);</script></p>
-                    </div>
-                </div>
-            </a>
-
-        </div>
-
-
-        <div class="tags">
-            <div class="sidebar-section-title">tags</div>
-            <div class="tags__body">
-                <a href="#toform" class="tag">Culture</a>
-                <a href="#toform" class="tag">Trip</a>
-                <a href="#toform" class="tag">Trends</a>
-                <a href="#toform" class="tag">Fashion</a>
-                <a href="#toform" class="tag">Lifestyle</a>
-                <a href="#toform" class="tag">Exploration</a>
-                <a href="#toform" class="tag">Food</a>
-                <a href="#toform" class="tag">Stories</a>
-            </div>
-        </div>
-
-
-        <div class="recommend">
-            <div class="sidebar-section-title">i recommend</div>
-            <div class="recommend__body">
-                <div class="recommend__img">
-                    <img src="img/sidebar-prod.png" alt="">
-                </div>
-                <div class="recommend__text-wrap">
-                    <p class="recommend__title">
-                        Long Jack XXXL
-                    </p>
-                    <ul class="recommend__list">
-                        <li class="recommend__list-item">Nature ingridients.</li>
-                        <li class="recommend__list-item">Increases libido and sexual gratification.</li>
-                        <li class="recommend__list-item">Gives intense orgasm.</li>
-                        <li class="recommend__list-item">Stimulates growth and maximizes hardness.</li>
+                <!-- Socials Bottom -->
+                <div class="follow">
+                    <div class="sidebar-section-title">FOLLOW ME</div>
+                    <ul class="follow__social">
+                        <li class="follow__social-item">
+                            <a class="follow__social-item__link" href="#toform">
+                                <svg class="facebook-b" width="14" height="27">
+                                    <use xlink:href="img/icons-sprite.svg#facebook-b"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="follow__social-item">
+                            <a class="follow__social-item__link" href="#toform">
+                                <svg class="twitter-b" width="25" height="20">
+                                    <use xlink:href="img/icons-sprite.svg#twitter-b"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="follow__social-item">
+                            <a class="follow__social-item__link" href="#toform">
+                                <svg class="instagram-b" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18.0237 4.39722C18.2037 4.39721 18.3819 4.43479 18.548 4.50779C18.7141 4.58079 18.8648 4.68775 18.9914 4.8225C19.118 4.95724 19.2179 5.11709 19.2855 5.29278C19.353 5.46847 19.3868 5.65652 19.3848 5.84604C19.3791 6.22842 19.2323 6.59344 18.9755 6.86385C18.7187 7.13427 18.372 7.28884 18.0089 7.29487C17.6439 7.29487 17.294 7.14222 17.0359 6.87052C16.7779 6.59881 16.6329 6.23029 16.6329 5.84604C16.6329 5.46179 16.7779 5.09328 17.0359 4.82157C17.294 4.54986 17.6439 4.39722 18.0089 4.39722H18.0237Z"
+                                        fill="#3D3D3D"
+                                    />
+                                    <path
+                                        d="M23.1873 6.25795C23.3575 8.15856 23.4685 17.1631 22.9358 19.2351C22.6764 20.4946 22.0489 21.6369 21.1414 22.5017C20.2339 23.3664 19.0919 23.9102 17.8759 24.0567C15.7767 24.2742 13.6675 24.3652 11.5584 24.3293C9.42961 24.3937 7.29936 24.2738 5.18917 23.971C3.99654 23.7161 2.91171 23.0686 2.09131 22.1222C1.27091 21.1757 0.75739 19.9792 0.624894 18.7054C0.314198 16.6724 0.284607 7.20825 0.839422 5.15965C1.11934 3.93717 1.74779 2.83414 2.64038 1.9987C3.53297 1.16326 4.64696 0.635401 5.83275 0.486017C7.74079 0.259395 9.66077 0.163124 11.5806 0.19781C13.7185 0.19781 15.8786 0.260125 17.1732 0.330229C18.7324 0.369763 20.2231 1.01316 21.3602 2.13737C22.4339 3.22442 23.0852 4.6932 23.1873 6.25795ZM20.9681 18.3081C21.2805 14.357 21.33 10.3877 21.116 6.42932C21.0687 5.46843 20.698 4.55668 20.0705 3.85733C19.4429 3.15797 18.5994 2.71669 17.691 2.61252C15.7877 2.42891 13.8763 2.3535 11.9653 2.38663C9.67947 2.38663 7.40842 2.44894 6.40976 2.56578C5.49211 2.62282 4.62266 3.01757 3.95334 3.68106C3.28402 4.34454 2.85739 5.23457 2.74798 6.19563C2.43393 10.2488 2.40673 14.3209 2.66661 18.3782C2.74176 19.1871 3.05534 19.9509 3.56341 20.5627C4.07148 21.1745 4.74858 21.6037 5.49986 21.79C7.53997 22.0993 9.60195 22.2192 11.662 22.1483C14.0662 22.1483 16.426 22.0704 17.3137 21.9691C18.2429 21.9214 19.1255 21.5267 19.8033 20.8558C20.4812 20.1849 20.9098 19.2817 21.0125 18.3081"
+                                        fill="#3D3D3D"
+                                    />
+                                    <path
+                                        d="M11.9133 6.07983C12.6863 6.07974 13.4517 6.24155 14.1647 6.55584C14.8778 6.87014 15.5244 7.33064 16.0669 7.91054C16.6094 8.49045 17.0369 9.17818 17.3246 9.9337C17.6122 10.6892 17.7543 11.4975 17.7425 12.3113C17.7308 13.9559 17.1022 15.529 15.9936 16.6875C14.885 17.846 13.3864 18.4962 11.8245 18.4961C11.0512 18.4973 10.2854 18.3362 9.57188 18.0222C8.85833 17.7083 8.21134 17.2479 7.66867 16.6677C7.126 16.0876 6.69852 15.3995 6.41121 14.6435C6.12389 13.8875 5.9825 13.0788 5.99527 12.2646C6.00699 10.62 6.63566 9.04699 7.74423 7.88845C8.85281 6.7299 10.3514 6.07979 11.9133 6.07983ZM11.8319 16.2683C12.8356 16.2645 13.7982 15.8478 14.5141 15.107C15.23 14.3663 15.6426 13.3602 15.6638 12.3036C15.6817 11.2512 15.3022 10.2345 14.6087 9.47651C13.9152 8.71854 12.9644 8.28133 11.9651 8.26086H11.9281C10.9244 8.26469 9.96185 8.68145 9.24592 9.4222C8.53 10.163 8.11739 11.169 8.09617 12.2257C8.08636 12.7502 8.17554 13.2716 8.35852 13.7596C8.5415 14.2477 8.81465 14.6926 9.16213 15.0686C9.50962 15.4447 9.92453 15.7443 10.3828 15.9503C10.8411 16.1562 11.3337 16.2643 11.8319 16.2683Z"
+                                        fill="#3D3D3D"
+                                    />
+                                    <defs>
+                                        <radialGradient id="instagram-b-gradient" r="150%" cx="30%" cy="107%">
+                                            <stop stop-color="#fdf497" offset="0"/>
+                                            <stop stop-color="#fdf497" offset="0.05"/>
+                                            <stop stop-color="#fd5949" offset="0.45"/>
+                                            <stop stop-color="#d6249f" offset="0.6"/>
+                                            <stop stop-color="#285AEB" offset="0.9"/>
+                                        </radialGradient>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="follow__social-item">
+                            <a class="follow__social-item__link" href="#toform">
+                                <svg class="youtube-b" width="25" height="18">
+                                    <use xlink:href="img/icons-sprite.svg#youtube-b"/>
+                                </svg>
+                            </a>
+                        </li>
                     </ul>
                 </div>
+
+                <a href="#toform" class="order-btn-mobile">Order Long Jack XXXL</a>
             </div>
-            <a href="#toform" class="order-btn-mobile">Order Long Jack XXXL</a>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <a href="{TERMS_URL}" target="_blank">Terms &amp; Conditions </a> |
+            <a href="{PRIVACY_POLICY_URL}" target="_blank">Privacy Policy</a> |
+            <a target="_blank" href="{RETURNS_URL}"
+                >Returns, Refunds and Exchanges Policy</a
+            >
+        </footer>
+        <!-- Fixed Popup -->
+        <div class="alert">
+            <img src="img/product2.png" alt="XXXL" class="alert__img" />
+            <span>
+                <span class="alert__name">Jelani</span> from
+                <span class="alert__city">Nakuru</span> just ordered
+                <span class="alert__count">2</span> packs of Long Jack XXXL
+            </span>
+        </div>
+        <!-- Fixed Button To Top -->
+        <div class="fixed__btn" id="scrollTop__btn">
+            <a href="#" class="fixed__btn__link" title="To Top"></a>
         </div>
 
-        <div class="follow">
-            <div class="sidebar-section-title">FOLLOW ME</div>
-            <ul class="follow__social">
-                <li class="follow__social-item">
-                    <a href="#toform">
-                        <img src="img/facebook-b.svg" alt="">
-                    </a>
-                </li>
-                <li class="follow__social-item">
-                    <a href="#toform">
-                        <img src="img/twitter-b.svg" alt="">
-                    </a>
-                </li>
-                <li class="follow__social-item">
-                    <a href="#toform">
-                        <img src="img/instagram-b.svg" alt="">
-                    </a>
-                </li>
-                <li class="follow__social-item">
-                    <a href="#toform">
-                        <img src="img/youtube-b.svg" alt="">
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/jq.inview.min.js"></script>
+        <script src="js/live-comments.js"></script>
 
-        <a href="#toform" class="order-btn-mobile">Order Long Jack XXXL</a>
-
-    </div>
-
-</div>
-
-
-
-
-<footer>
-    <a href="{TERMS_URL}" target="_blank">Terms &amp; Conditions </a> |
-    <a href="{PRIVACY_POLICY_URL}" target="_blank">Privacy Policy</a> |
-    <a target="_blank" href="{RETURNS_URL}">Returns, Refunds and Exchanges Policy</a>
-</footer>
-
-<div class="alert">
-    <img src="img/product2.png" alt="XXXL" class="alert__img">
-    <span>
-        <span class="alert__name">Jelani</span> from <span class="alert__city">Nakuru</span> just ordered <span class="alert__count">2</span> packs of Long Jack XXXL
-    </span>
-</div>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="js/jq.inview.min.js"></script>
-<script src="js/live-comments.js"></script>
-
-<script src="js/alarm.js"></script>
-<script src="js/main.js"></script>
-
-</body>
-
+        <script src="js/alarm.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>
